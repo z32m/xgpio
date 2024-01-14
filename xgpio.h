@@ -1,6 +1,8 @@
 #ifndef __xgpio_h__
 #define __xgpio_h__
 
+#include <xdts.h>
+
 #define GPIO_DT_SPEC_FOR(_node_label, _idx) GPIO_DT_SPEC_GET_BY_IDX(L(_node_label), gpios, _idx)
 
 #define DEFINE_GPIO_EXTERN(_node_label) \
