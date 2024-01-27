@@ -21,6 +21,6 @@
         gpio_add_callback(dt_io.port, &dt_io##_cb);               \
     }
 
-#define DEFINE_PWM(_pwm) const struct pwm_dt_spec _pwm = PWM_DT_SPEC_GET(L(_pwm));
+#define DEFINE_PWM(_pwm) const pwm_t _pwm = PWM_DT_SPEC_GET(L(_pwm));
 
 #endif
