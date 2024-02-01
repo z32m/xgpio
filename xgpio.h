@@ -12,7 +12,7 @@
     const struct gpio_dt_spec _node_label = GPIO_DT_SPEC_FOR(_node_label, 0)
 
 #define PIN(x) gpio_pin_get_dt(x)
-#define GPIO_DEFINE_CALLBACK(dt_io) struct gpio_callback dt_io##_cb
+#define DEFINE_GPIO_CALLBACK(dt_io) struct gpio_callback dt_io##_cb
 
 #define gpio_catch(dt_io, mode, handler)                          \
     {                                                             \
