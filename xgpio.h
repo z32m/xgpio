@@ -25,4 +25,10 @@
 
 #define DEFINE_PWM(_pwm) const pwm_t _pwm = PWM_DT_SPEC_GET(L(_pwm));
 
+typedef struct
+{
+    struct gpio_callback gpio_cb;
+    void *data;
+} gpio_user_callback_t;
+
 #endif
