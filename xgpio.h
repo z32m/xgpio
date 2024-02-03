@@ -2,6 +2,7 @@
 #define __xgpio_h__
 
 #include <xdts.h>
+#include <zephyr/drivers/gpio.h>
 
 #define GPIO_DT_SPEC_FOR(_node_label, _idx) GPIO_DT_SPEC_GET_BY_IDX(L(_node_label), gpios, _idx)
 
@@ -23,7 +24,7 @@
         gpio_add_callback(dt_io.port, &dt_io##_cb);               \
     }
 
-#define DEFINE_PWM(_pwm) const pwm_t _pwm = PWM_DT_SPEC_GET(L(_pwm));
+#define DEFINE_PWM(_pwm) const pwm_t _pwm = PWM_DT_SPEC_GET(L(_pwm))
 
 typedef struct
 {
